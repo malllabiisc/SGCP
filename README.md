@@ -51,11 +51,8 @@ $ ./setup.sh
 
 #### Dataset
 
-Download the following dataset(s):
-
-[Data](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/ER-roD8qRXFCsyJwbOHOVPgBs-VTKNmkNLzQvM0cLtvBhw?e=a0dOid)
-
-Extract and place them in the `SGCP/data` directory
+- Download the following dataset(s): [Data](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/ER-roD8qRXFCsyJwbOHOVPgBs-VTKNmkNLzQvM0cLtvBhw?e=a0dOid)
+- Extract and place them in the `SGCP/data` directory
 
 Path: `SGCP/data/<dataset-folder-name>`.
 
@@ -66,19 +63,15 @@ data/QQPPos/<train/test/val>/<src.txt/tgt.txt/refs.txt/src.txt-corenlp-opti/tgt.
 
 #### Pre-trained Models:
 
-Download the following pre-trained models for both QQPPos and ParaNMT50m datasets:
-
-[Models](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/Ed5IT05LTaFNhVFweWuUE8MBnRCkSAJwSotrAhzT_2lL5w?e=3hOrSI)
-
-Extract and place them in the `SGCP/Models` directory
+- Download the following pre-trained models for both QQPPos and ParaNMT50m datasets: [Models](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/Ed5IT05LTaFNhVFweWuUE8MBnRCkSAJwSotrAhzT_2lL5w?e=3hOrSI)
+- Extract and place them in the `SGCP/Models` directory
 
 Path: `SGCP/Models/<dataset_Models>`
 
 #### Evaluation Essentials
 
-Download the evaluation file and place it in `SGCP/src/evaluation` directory
-
-[evaluation](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/EQVo8LOkzlFKhAlfjMnZc20BEFfAzvemc9TdBONtBSpmGQ?e=q3J4NS)
+- Download the evaluation file: [evaluation](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/EQVo8LOkzlFKhAlfjMnZc20BEFfAzvemc9TdBONtBSpmGQ?e=q3J4NS)
+- Extract and place it in `SGCP/src/evaluation` directory
 
 Path: `SGCP/src/evaluation/<apps/data/ParaphraseDetection>`
 
@@ -142,5 +135,45 @@ This contains all the necessary files needed to evaluate the model. It also cont
   python -m src.evaluation.eval -i Generations/ParaNMT_Models/final_paraphrases.txt
   -r data/ParaNMT50m/test/ref.txt -t data/ParaNMT50m/test/tgt.txt
   ```
+
+## Custom Dataset Processing
+  Preprocess and parse the data using the following steps.
+
+  1. Move the contents of your custom dataset in the data/ directory, with files arranged something like this:
+      - data
+        - Custom_Dataset
+          - train
+              - src.txt
+              - tgt.txt
+          - val
+              - src.txt
+              - tgt.txt
+              - ref.txt
+          - test
+              - src.txt
+              - tgt.txt
+              - ref.txt
+
+       Here, src.txt contains the source sentences, tgt.txt contains exemplars and ref.txt contains the paraphrases.
+  2. Construct a byte-pair codes file which will be used to generate byte pair encodings of the dataset. From the main directory of this repo, run:
+    ```
+    subword-nmt learn-bpe  <data/Custom_Dataset/train/src.txt> data/Custom_Dataset/train/codes.txt
+    ```
+    Note: [Optional] Generate codes from both src.txt and tgt.txt - For that first concatenate the two files and replace src.txt with the name of the concatenated file in the command.
+
+  3. Parse the data files using stanford corenlp. First start a corenlp server by executing the following commands:
+  ```
+  cd src/evaluation/apps/stanford-corenlp-full-2018-10-05
+  java -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -preload tokenize,ssplit,pos,lemma,ner,parse -parse.model /edu/stanford/nlp/models/srparser/englishSR.ser.gz -status_port <PORT_NUMBER> -port <PORT_NUMBER> -timeout 15000
+  ```
+
+  4. Finally run the parser on the text files.
+  ```
+  cd <PATH_TO_THIS_REPO>
+  python -m src.utils.con_parser -infile data/Custom_Dataset/train/src.txt -codefile data/Custom_Dataset/train/codes.txt -port <PORT_NUMBER (where the corenlp server is running, from step 3)> -host localhost
+  ```
+  This will generate a file in train folder called src.txt-corenlp-opti
+  Run this for all other files i.e. tgt.txt in train folder, src.txt, tgt.txt, ref.txt in val folder and similarly for the files in test folder.
+
 
 For any clarification, comments, or suggestions please create an issue or contact [ashutosh@iisc.ac.in](http://ashutoshml.github.io)
