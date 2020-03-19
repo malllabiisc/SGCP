@@ -53,7 +53,7 @@ $ ./setup.sh
 
 Download the following dataset(s):
 
-[Data]()
+[Data](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/ER-roD8qRXFCsyJwbOHOVPgBs-VTKNmkNLzQvM0cLtvBhw?e=a0dOid)
 
 Extract and place them in the `SGCP/data` directory
 
@@ -68,7 +68,7 @@ data/QQPPos/<train/test/val>/<src.txt/tgt.txt/refs.txt/src.txt-corenlp-opti/tgt.
 
 Download the following pre-trained models for both QQPPos and ParaNMT50m datasets:
 
-[Models]()
+[Models](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/Ed5IT05LTaFNhVFweWuUE8MBnRCkSAJwSotrAhzT_2lL5w?e=3hOrSI)
 
 Extract and place them in the `SGCP/Models` directory
 
@@ -77,6 +77,8 @@ Path: `SGCP/Models/<dataset_Models>`
 #### Evaluation Essentials
 
 Download the evaluation file and place it in `SGCP/src/evaluation` directory
+
+[evaluation](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/EQVo8LOkzlFKhAlfjMnZc20BEFfAzvemc9TdBONtBSpmGQ?e=q3J4NS)
 
 Path: `SGCP/src/evaluation/<apps/data/ParaphraseDetection>`
 
