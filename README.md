@@ -81,7 +81,7 @@ This contains all the necessary files needed to evaluate the model. It also cont
 
 - For training the model with default hyperparameter settings, execute the following command:
   ```
-  python -m src.main -run_name test_run -dataset <DatasetName> -gpu <GPU-ID> -bpe
+  python -m src.main -mode train -run_name testrun -dataset <DatasetName> -gpu <GPU-ID> -bpe
   ```
   - -run_name: To specify the name of the run for storing model parameters
   - -dataset: Which dataset to train the model on, choose from QQPPos and ParaNMT50m

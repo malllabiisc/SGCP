@@ -56,8 +56,8 @@ class IterableParaphraseDataset(IterableDataset):
             orig_sent = get_sents_from_trees_bpe([orig_tree])[0]
             para_sent = get_sents_from_trees_bpe([para_tree])[0]
 
-        remove_leaves_from_trees([orig_tree])
-        remove_leaves_from_trees([para_tree])
+        remove_leaves_from_trees([orig_tree], bpe=self.args.bpe)
+        remove_leaves_from_trees([para_tree], bpe=self.args.bpe)
 
         if len(para_sent) > self.args.max_length or len(para_sent) == 0:
             pair = {

@@ -8,7 +8,6 @@ import torch.nn.functional as F
 # from scipy.sparse import csr_matrix
 import pdb
 
-from pytorch_pretrained_bert import BertTokenizer, BertModel, BertForMaskedLM
 
 
 class EncoderRNN(nn.Module):
