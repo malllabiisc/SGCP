@@ -17,7 +17,7 @@ jsonschema==3.0.1
 kiwisolver==1.1.0
 matplotlib==3.1.1
 netifaces==0.10.9
-nltk==3.4.4
+nltk==3.4.5
 numpy==1.17.0
 nvidia-ml-py3==7.352.0
 Pillow==6.1.0
