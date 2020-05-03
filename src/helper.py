@@ -82,6 +82,9 @@ def create_save_directories(log_fname, model_fname, run_name):
     if not os.path.exists(os.path.join(model_fname, run_name)):
         os.makedirs(os.path.join(model_fname, run_name))
 
+    if not os.path.exists('tempgens'):
+        os.makedirs('tempgens')
+
 # Will save the checkpoint with the best validation scores (progressively), based on epoch number
 def save_checkpoint(state, epoch, logger, path, args, old_path):
     sp          = path.split(".")
@@ -315,7 +318,7 @@ def remove_leaves_from_tree(tree, root, bpe = False):
 def remove_leaves_from_trees(trees, bpe = False):
     for tree in trees:
         remove_leaves_from_tree(tree, 'ROOT', bpe)
-    
+
 
 def trim_tree(tree, height, root, cur_height):
     if len(tree[root]) == 0:
