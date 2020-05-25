@@ -1,6 +1,6 @@
 # Syntax-Guided Controlled Generation of Paraphrases
 
-Source code for [TACL 2020](https://transacl.org/) paper: [Syntax-Guided Controlled Generation of Paraphrases](https://ashutoshml.github.io/assets/SGCP_TACL2020.pdf)
+Source code for [TACL 2020](https://transacl.org/) paper: [Syntax-Guided Controlled Generation of Paraphrases](https://arxiv.org/pdf/2005.08417.pdf)
 
 <p align="center">
   <img align="center" src="https://github.com/malllabiisc/SGCP/blob/master/images/SGCP.png" alt="Image" height="420" >
