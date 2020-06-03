@@ -72,6 +72,7 @@ Path: `SGCP/Models/<dataset_Models>`
 
 - Download the evaluation file: [evaluation](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/EQVo8LOkzlFKhAlfjMnZc20BEFfAzvemc9TdBONtBSpmGQ?e=q3J4NS)
 - Extract and place it in `SGCP/src/evaluation` directory
+- From `SGCP`, make `multi-bleu.perl` executable by running: `chmod a+x ./src/evaluation/apps/multi-bleu.perl`
 
 Path: `SGCP/src/evaluation/<apps/data/ParaphraseDetection>`
 
