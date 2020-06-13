@@ -10,6 +10,7 @@ configobj==5.0.6
 cycler==0.10.0
 docutils==0.14
 everett==1.0.2
+editdistance==0.3.1
 idna==2.8
 jmespath==0.9.4
 joblib==0.13.2
