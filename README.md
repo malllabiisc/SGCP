@@ -1,6 +1,6 @@
 # Syntax-Guided Controlled Generation of Paraphrases
 
-Source code for [TACL 2020](https://transacl.org/) paper: [Syntax-Guided Controlled Generation of Paraphrases](https://arxiv.org/pdf/2005.08417.pdf)
+Source code for [TACL 2020](https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00318) paper: [Syntax-Guided Controlled Generation of Paraphrases](https://arxiv.org/pdf/2005.08417.pdf)
 
 <p align="center">
   <img align="center" src="https://github.com/malllabiisc/SGCP/blob/master/images/SGCP.png" alt="Image" height="420" >
@@ -175,5 +175,22 @@ This contains all the necessary files needed to evaluate the model. It also cont
   This will generate a file in train folder called src.txt-corenlp-opti
   Run this for all other files i.e. tgt.txt in train folder, src.txt, tgt.txt, ref.txt in val folder and similarly for the files in test folder.
 
+### Citing:
+Please cite the following paper if you use this code in your work.
+
+```bibtex
+@article{sgcp2020,
+author = {Kumar, Ashutosh and Ahuja, Kabir and Vadapalli, Raghuram and Talukdar, Partha},
+title = {Syntax-Guided Controlled Generation of Paraphrases},
+journal = {Transactions of the Association for Computational Linguistics},
+volume = {8},
+number = {},
+pages = {330-345},
+year = {2020},
+doi = {10.1162/tacl\_a\_00318},
+URL = { https://doi.org/10.1162/tacl_a_00318 },
+eprint = { https://doi.org/10.1162/tacl_a_00318 }
+}
+```
 
 For any clarification, comments, or suggestions please create an issue or contact [ashutosh@iisc.ac.in](http://ashutoshml.github.io)
