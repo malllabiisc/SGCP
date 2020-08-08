@@ -94,12 +94,12 @@ This contains all the necessary files needed to evaluate the model. It also cont
 
 - For generating paraphrases on the QQPPos dataset, execute the following command:
   ```
-  python -m src.main -mode decode -dataset QQPPos -run_name QQP_Models -gpu <gpu-num> -beam_width 1 -max_length 60 -res_file generations.txt
+  python -m src.main -mode decode -dataset QQPPos -run_name QQP_Models -gpu <gpu-num> -beam_width 10 -max_length 60 -res_file generations.txt
   ```
 
 - Similarly for ParaNMT dataset:
   ```
-  python -m src.main -mode decode -dataset ParaNMT50m -run_name ParaNMT_Models -gpu <gpu-num> -beam_width 1 -max_length 60 -res_file generations.txt
+  python -m src.main -mode decode -dataset ParaNMT50m -run_name ParaNMT_Models -gpu <gpu-num> -beam_width 10 -max_length 60 -res_file generations.txt
   ```
 
 - To evaluate BLEU, ROUGE, METEOR, TED and Prec. scores, first clean the generations:
