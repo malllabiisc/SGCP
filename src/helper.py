@@ -21,7 +21,7 @@ from src.word_embedding_utils import *
 # Ignore warnings
 import warnings
 warnings.filterwarnings("ignore")
-MULTI_BLEU_PERL = 'src/evaluation/multi-bleu.perl'
+MULTI_BLEU_PERL = 'src/evaluation/apps/multi-bleu.perl'
 
 def run_multi_bleu(input_file, reference_file):
     bleu_output = subprocess.check_output(
