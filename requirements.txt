@@ -13,7 +13,7 @@ everett==1.0.2
 editdistance==0.3.1
 idna==2.8
 jmespath==0.9.4
-joblib==0.13.2
+joblib==1.2.0
 jsonschema==3.0.1
 kiwisolver==1.1.0
 matplotlib==3.1.1
