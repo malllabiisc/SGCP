@@ -51,7 +51,7 @@ $ ./setup.sh
 
 #### Dataset
 
-- Download the following dataset(s): [Data](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/ER-roD8qRXFCsyJwbOHOVPgBs-VTKNmkNLzQvM0cLtvBhw?e=a0dOid)
+- Download the following dataset(s): [Data](https://drive.google.com/file/d/1iUs-cZGhyFssgkTyvi6-N368yXQECViD/view?usp=sharing)
 - Extract and place them in the `SGCP/data` directory
 
 Path: `SGCP/data/<dataset-folder-name>`.
