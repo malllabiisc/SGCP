@@ -63,14 +63,14 @@ data/QQPPos/<train/test/val>/<src.txt/tgt.txt/refs.txt/src.txt-corenlp-opti/tgt.
 
 #### Pre-trained Models:
 
-- Download the following pre-trained models for both QQPPos and ParaNMT50m datasets: [Models](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/Ed5IT05LTaFNhVFweWuUE8MBnRCkSAJwSotrAhzT_2lL5w?e=3hOrSI) - *This link has stopped working as of January 2024. Kindly reach out to authors who have used the models to publish results based on these models.*
+- Download the following pre-trained models for both QQPPos and ParaNMT50m datasets: [Models](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/Ed5IT05LTaFNhVFweWuUE8MBnRCkSAJwSotrAhzT_2lL5w?e=3hOrSI) - *This link has stopped working as of January 2024. Kindly reach out to other researchers/authors who have used the models to publish baseline results based on these models, to see incase they have saved a copy*
 - Extract and place them in the `SGCP/Models` directory
 
 Path: `SGCP/Models/<dataset_Models>`
 
 #### Evaluation Essentials
 
-- Download the evaluation file: [evaluation](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/EQVo8LOkzlFKhAlfjMnZc20BEFfAzvemc9TdBONtBSpmGQ?e=q3J4NS) - *This link has stopped working as of January 2024. Kindly reach out to authors who have used the evaluation files to publish results based on these models.*
+- Download the evaluation file: [evaluation](https://indianinstituteofscience-my.sharepoint.com/:u:/g/personal/ashutosh_iisc_ac_in/EQVo8LOkzlFKhAlfjMnZc20BEFfAzvemc9TdBONtBSpmGQ?e=q3J4NS) - *This link has stopped working as of January 2024.  Kindly reach out to other researchers/authors who have used the evaluation files to publish baseline results based on these models, to see incase they have saved a copy.*
 - Extract and place it in `SGCP/src/evaluation` directory
 - Give executable permissions to `SGCP/src/evaluation/apps/multi-bleu.perl`
 
